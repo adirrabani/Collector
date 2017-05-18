@@ -1,5 +1,5 @@
 # Collector
-Application that collect data from web apis and write it to elastic search, other sample methods can be added as well (performance monitor samples for example).
+Application that collect data from web apis and write it to elasticsearch, other sample methods can be added as well (performance monitor samples for example).
 
 **Current integrations:**
 1. Google finance API in order to retrieve stocks data.
@@ -16,10 +16,10 @@ Application that collect data from web apis and write it to elastic search, othe
 	</appSettings>
   ```
   1. _ElasticAddress_ - elasticsearch server and port
-  2. _StocksGeneralUrl_ - Base URL for stock samples, should not be changed since the app change {StockName} during execution.
-  3. _WeatherGeneralUrl_ - Base URL for weather samples, ```{API Key}``` should be replaced with relevant API key from Openweathermap, the will change {cityName} during the execution.
+  2. _StocksGeneralUrl_ - Base URL for stock samples, should not be changed since the app will change {StockName} during the execution.
+  3. _WeatherGeneralUrl_ - Base URL for weather samples, ```{API Key}``` should be replaced with relevant API key from Openweathermap, the app will change {cityName} during the execution.
 
-- settings.json : Json filke that conatains configuration of each sample (stock/weather), has to be in the same folder with the exe.
+- settings.json : Json file that conatains configuration of each sample (stock/weather).
 ```json
   {
   "configuration": {
@@ -42,7 +42,7 @@ Application that collect data from web apis and write it to elastic search, othe
   }
 }
 ```
-  1. _type_ : Specifies sample type, should not e changed since stock samples are Web API samples.
+  1. _type_ : Specifies sample type, should not be changed since stock/weather samples are Web API samples.
   2. _isActive_ : in order to enable or disable specific sample.
   3. _indexName_ : Specifies which sample is this (stock/weather).
   4. _stockTicker/cityName_ : Specifies which stock/city we want to sample.  
