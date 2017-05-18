@@ -2,33 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Xml;
 using Collector.Helpers;
 using System.Collections.Specialized;
 using Nest;
+
 
 namespace Collector
 {
     class Program
     {
-
-
-        public class Person
-        {
-            public int Id { get; set; }
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-        }
-
-
         static void Main(string[] args)
-        {
+        {            
+
             NameValueCollection appSettings = null;
             try
             {

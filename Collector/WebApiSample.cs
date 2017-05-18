@@ -88,7 +88,8 @@ namespace Collector
                     // If there is problem with elasticsearch server increase failures count and write the error to the console.
                     if(res.OriginalException != null)
                     {
-                        Console.WriteLine("[" + DateTime.Now + "] Error when trying to insert data to elasticsearch: " + res.OriginalException.Message + ", " + res.OriginalException.InnerException.Message);
+                        Console.WriteLine("[" + DateTime.Now + "] Error when trying to insert " + webApiSample.IndexName + " data to elasticsearch: " + res.OriginalException.Message);
+                        if(res.OriginalException.InnerException != null) { Console.Write(", " + res.OriginalException.InnerException.Message); }                            
                         failures += 1;
                     }
                     else { failures = 0; }
@@ -100,6 +101,7 @@ namespace Collector
 
                 Thread.Sleep(webApiSample.Interval);
             }
+
         }
     }
 }

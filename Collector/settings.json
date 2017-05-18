@@ -1,0 +1,34 @@
+{
+  "configuration": {
+    "samples": [
+      {
+        "type": "WebApi",
+        "isActive": "true",
+        "indexName": "stocks",
+		"stockTicker" : "TSEM",
+		"interval": "60000"
+      },
+      {
+        "type": "WebApi",
+        "isActive": "true",
+        "indexName": "stocks",
+        "stockTicker": "GD",
+        "interval": "60000"
+      },
+      {
+        "type": "WebApi",
+        "isActive": "true",
+        "indexName": "weather",
+		"cityName" : "berlin",
+		"interval": "60000"
+      },
+      {
+        "type": "WebApi",
+        "isActive": "true",
+        "indexName": "weather",
+		"cityName" : "london",
+		"interval": "60000"
+      }
+    ]
+  }
+}

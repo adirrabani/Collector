@@ -22,16 +22,26 @@ namespace Collector
 
         public string CityName { get; set; }
         public double Temperature { get; set; }
-        public double Humidity { get; set; }
+        public double Humidity { get; set; }        
         public DateTime? Sunrise { get; set; }
         public DateTime? Sunset { get; set; }
         public DateTime? CalcDate { get; set; }
+        
+        private double _coordLongitude { get; set; }
+        private double _coordLatitude { get; set; }
+        // Create location string for elasticsearch
+        public string Location
+        {
+            get { return _coordLatitude + "," + _coordLongitude; }
+        }
 
         public override bool MapFields(JObject WeatherData)
         {
             CityName = WeatherData["name"].ToString();
             Temperature = (double)WeatherData["main"]["temp"];
             Humidity = (double)WeatherData["main"]["humidity"];
+            _coordLongitude = (double)WeatherData["coord"]["lon"];
+            _coordLatitude = (double)WeatherData["coord"]["lat"];
             Sunrise = Common.UnixTimeStampToDateTime((long)WeatherData["sys"]["sunrise"]);
             Sunset  = Common.UnixTimeStampToDateTime((long)WeatherData["sys"]["sunset"]);
             CalcDate = Common.UnixTimeStampToDateTime((long)WeatherData["dt"]);
