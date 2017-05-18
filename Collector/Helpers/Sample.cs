@@ -24,7 +24,7 @@ namespace Collector.Helpers
             }
             catch (Exception e)
             {
-                Console.WriteLine("[" + DateTime.Now + "] Error : " + System.Environment.NewLine + e);
+                Console.WriteLine("[" + DateTime.Now + "] Error when opening settings.json file : " + System.Environment.NewLine + e);
             }
             // If samples wasn't retrieved return null
             return samples;

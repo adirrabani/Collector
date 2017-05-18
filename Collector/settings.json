@@ -5,8 +5,8 @@
         "type": "WebApi",
         "isActive": "true",
         "indexName": "stocks",
-		"stockTicker" : "TSEM",
-		"interval": "60000"
+        "stockTicker": "TSEM",
+        "interval": "60000"
       },
       {
         "type": "WebApi",
@@ -19,15 +19,50 @@
         "type": "WebApi",
         "isActive": "true",
         "indexName": "weather",
-		"cityName" : "berlin",
-		"interval": "60000"
+        "cityName": "berlin",
+        "interval": "10000"
       },
       {
         "type": "WebApi",
         "isActive": "true",
         "indexName": "weather",
-		"cityName" : "london",
-		"interval": "60000"
+        "cityName": "oslo",
+        "interval": "10000"
+      },
+      {
+        "type": "WebApi",
+        "isActive": "true",
+        "indexName": "weather",
+        "cityName": "london",
+        "interval": "10000"
+      },
+      {
+        "type": "WebApi",
+        "isActive": "true",
+        "indexName": "weather",
+        "cityName": "amsterdam",
+        "interval": "10000"
+      },
+      {
+        "type": "WebApi",
+        "isActive": "true",
+        "indexName": "weather",
+        "cityName": "paris",
+        "interval": "10000"
+      },
+      {
+        "type": "WebApi",
+        "isActive": "true",
+        "indexName": "weather",
+        "cityName": "moscow",
+        "interval": "10000"
+      },
+      {
+        "type": "WebApi",
+        "isActive": "true",
+        "indexName": "weather",
+        "cityName": "reykjavík",
+        "interval": "10000"
       }
     ]
   }

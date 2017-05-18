@@ -59,6 +59,7 @@ namespace Collector
         // Running web api sample every X seconds (configurable)
         public static void StartApiSample(WebApiSample webApiSample, CancellationToken token, ConnectionSettings elasticSettings)
         {
+            Console.WriteLine("[" + DateTime.Now + "] Starting " + webApiSample.SampleType + " sample, API URL : " + webApiSample.Url);
             // Create elasticsearch client
             var elasticClient = new ElasticClient(elasticSettings);
             
