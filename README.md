@@ -51,3 +51,8 @@ Application that collect data from web apis and write it to elastic search, othe
 **Prerequisites :**
 1. Elasticearch server up and running.
 2. API key for Openweathermap.
+
+**Example of Kibana Dashboard - Weather Samples**
+![Weather Dashboard](http://i.imgur.com/BDyjXc5.png)
+
+
